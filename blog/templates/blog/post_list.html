@@ -7,16 +7,14 @@
       <h1><a href="/">Czy Cokolwiek</a></h1>
     </div>
 
+  
+      {% for post in posts %}
     <div>
-      <p>28.05.2018 08:46</p>
-      <h2><a href="/">Łacina Nie Tylko Podwórkowa</a></h2>
-      <p>Quidquid latine dictum sit, altum videtur</p>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
+{% endfor %}
 
-    <div>
-      <p>28.05.2018 08:46</p>
-      <h2><a href="/">Wyjątek</a></h2>
-      <p>Clava curva pie vinco, czyli krzywą maczugą pobożnie zwyciężaj</p>
-    </div>
 </body>
 </html>
